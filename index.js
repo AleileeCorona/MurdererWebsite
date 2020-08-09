@@ -1,4 +1,4 @@
-/*(function () {
+(function () {
 
     'use strict';
     
@@ -12,12 +12,14 @@
          e.preventDefault();
          $('.loading').removeClass('hide');
          $('#err').addClass('hide');
-         const murderer = $('#murderer').val();
+
+        const murderer = $('#murderer').val();
             if (!murderer) {
                 return errCreator('You must choose a murderer!');
             }
-            const result = $('#maxresult').val();
-            const murdererTransformed = murderer;
+
+        const result = $('#maxresult').val();
+        const murdererTransformed = murderer;
             $.ajax(`${searchURL}?q=${murdererTransformed}&k=${apiKey}&info=1&limit=${result}`, {
                 dataType: "jsonp" 
             })
@@ -69,7 +71,9 @@
         }
     
     })()
-    */
+
+
+
 
 
 

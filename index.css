@@ -1,3 +1,11 @@
+.hide {
+  display: none;
+}
+
+html {  
+  height: 100%;
+}
+
 body{
   background: url(https://images.unsplash.com/photo-1559581958-df379578606a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2147&q=80);
   background-size: cover;
@@ -7,9 +15,7 @@ body{
 
 }
 
-html {  
-  height: 100%;
-}
+
 
 #content {
   text-align: center;
@@ -22,6 +28,14 @@ html {
 h1 {
   font-weight: 700;
   font-size: 5em;
+}
+
+#murderer{
+  background-color: transparent;
+  border: transparent;
+  width: auto;
+  color: white;
+  
 }
 
 
