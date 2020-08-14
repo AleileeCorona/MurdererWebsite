@@ -6,28 +6,36 @@ html {
   height: 100%;
 }
 
-body{
+body {
   background: url(https://images.unsplash.com/photo-1559581958-df379578606a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2147&q=80);
   background-size: cover;
   background-position: center;
-  font-family: Lato;
-  color: white;
+  font-family: 'Lato';
+  color: rgb(253, 250, 250);
+  text-align: center;
 
 }
 
+fieldset {
+  text-align: center;
+}
 
 
-#content {
+legend {
   text-align: center;
   padding-top: 25%;
   text-shadow: 0px 4px 3px rgba(0,0,0,0, 0.4),
                0px 8px 13px rgba(0,0,0,0, 0.1),
                0px 18px 23px rgba(0,0,0,0, 0.1);
-}
-
-h1 {
   font-weight: 700;
   font-size: 5em;
+  font-family: 'Lato', sans-serif;
+            
+}
+
+h3{
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 #murderer{
@@ -38,6 +46,16 @@ h1 {
   
 }
 
+#maxresult{
+  background-color: transparent;
+  border: transparent;
+  width: auto;
+  color: white;
+}
+
+::placeholder{
+  color:white;
+}
 
 hr {
   width: 400px;
@@ -45,11 +63,57 @@ hr {
   border-bottom: 1px solid rgba(0,0,0,0,2)
 }
 
-button {
-  color:black;
+#submit {
+  display: flex;
+  text-align: center;
+
 }
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column{
+  display: flex;
+
+}
+
+#vertical-center{
+  display: flex;
+  justify-content: center;
+}
+
 
 footer{
   text-align: center;
   
 }
+
+.card-body{
+  color: black;
+  background: transparent;
+}
+.card-title{
+  color:black;
+  background: transparent;
+}
+
+/*@media screen {
+  min-device-width: 320px;
+  max-device-width: 480px;
+}
+
+@media screen {
+  min-device-width: 768px;
+  max-decive-width: 1024px;
+}
+*/
+
+#results {
+  display: flex;
+}
+
+#wiki-results, #results-list{
+  width: 50%;
+}
+

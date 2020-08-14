@@ -4,82 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/582c1dee6c.js" crossorigin="anonymous"></script>
-
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
         <title>My Favorire Murderer API</title>
 </head>
-
-
+<a href="" ></a>
 <body>
     <main>
-
         <div id="err" class="alert alert-danger hide"></div>
         <div class="loading hide">&nbsp;</div>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-        <span class="navbar-brand mb-0 h1" href="#">My Favorite Murderer</span>
-     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-         <div class="navbar-nav">
-             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            <!-- <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>-->
-         </div>
-     </div>
-     </div>
-    </nav>
-
-        <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div id="content">
-                <h1>My Favorite Murderer</h1>
-                <h3>How dangerous can someone actually be?</h3>
-                <input id="murderer" type="text" placeholder="Ted Bundy">
+        <div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">My Favorite Murderer</a>
+        </div>
+        <section class='mt-5'>
+            <form action="">
+                <fieldset>
+                    <legend>My Favorite Murderer</legend>
+                    <h3>How dangerous can someone actually be?</h3>
                     <div class="form-group">
-                        <label for="" class="label form-label">Max results</label>
-                        <input id='maxresult' type="number" value='5'>
+                        <label for=""></label>
+                        <input id='murderer' type="text" placeholder='Enter Murderer' autofocus required spellcheck="true">
                     </div>
+                    <div class="form-group">
+                   <label for="" class="label form-label"></label>
+                    <input id='maxresult' type="number" value='5' >
+                   </div>
+                </fieldset>
+
                 <hr>
-                <button type="button" class="btn btn-light btn-lg"> <i class="fas fa-skull-crossbones"></i> Find out!</button>                
+                <div class="container">
+                <div class="vertical-center">
+                    <button id="submit" class='btn btn-light' type='submit'>Find Out!</button>
                 </div>
-              </div>
-            </div>
-        </div>
+                </div>
 
 
-    <section id="results" class="hidden">
-        <h2></h2>
-        <ul id="results-list">
-        </ul>
-    </section>
-
-    <!--<div class="d-flex align-items-center">
-        <strong>Loading...</strong>
-        <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
-    </div>  --> 
-
-<footer>
-    <div class="row newsearchrow">
-        <div class="banner">
-            <h2 class="searchagain">...</h2>
-        </div>
-        <div class="row loadrow">
-            <div class="banner">
-                <h2 class="loadtext">...</h2>
-            </div>
-            <i class="fas fa-copyright"></i>
-        </div>
-    </div>
-
-</footer>
-</main>
+            </form>
+        </section>
+        <section id="results" class="hidden">
+       <!-- <h2></h2>-->
+          <ul id="results-list">
+          </ul>
+          <ul id="wiki-results">
+          </ul>
+        </section>
+        <section id="results"></section>
+    </main>
     
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 
