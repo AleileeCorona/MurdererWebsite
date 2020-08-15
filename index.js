@@ -1,16 +1,16 @@
 'use strict';
 
 const apiKey = 'AIzaSyDJsiWIrL8I583xvsI2OYHSNr13TQza-Go'; 
-const searchURL = 'https://www.googleapis.com/youtube/v3/search';
+const searchYoutubeURL = 'https://www.googleapis.com/youtube/v3/search';
 
 
-function formatQueryParams(params) {
-  const queryItems = Object.keys(params)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
-  return queryItems.join('&');
+function formatYoutubeQueryParams(youtubeParams) {
+  const youtubeQueryItems = Object.keys(youtubeParams)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(youtubeParams[key])}`)
+  return youtubeQueryItems.join('&');
 }
 
-function displayResults(responseJson) {
+function displayYoutubeResults(responseJson) {
   // if there are previous results, remove them
   console.log(responseJson);
   $('#results-list').empty();
@@ -37,7 +37,7 @@ function displayResults(responseJson) {
 };
 
 function getYouTubeVideos(query, maxResults=5) {
-  const params = {
+  const youtubeParams = {
    part: 'snippet', 
    maxResults,
 // id: 'string',
@@ -45,8 +45,8 @@ function getYouTubeVideos(query, maxResults=5) {
    q: query,
   // items: 'list'
   };
-  const queryString = formatQueryParams(params)
-  const url = `${searchURL}?${queryString}`;
+  const youtubeQueryString = formatYoutubeQueryParams(youtubeParams)
+  const url = `${searchYoutubeURL}?${youtubeQueryString}`;
 
   console.log(url);
 
@@ -58,25 +58,71 @@ function getYouTubeVideos(query, maxResults=5) {
       }
       throw new Error(response.statusText);
     })
-    .then(responseJson => displayResults(responseJson))
+    .then(responseJson => displayYoutubeResults(responseJson))
     .catch(err => {
       $('#err').text(`Something went wrong: ${err.message}`);
     });
 }
-
-function getWikiInfo(query, maxResults=5){
-const wikiParams = {
-    action: 'query',
-    list: 'search',
-    format: 'json',
-    rvsection: "0"
-  };
   
-
 // call to Wikipedia API
-function searchWiki(searchWord) {
+/*function searchWiki(searchWord) {
     wikiParams.titles = searchWord;
-    url = 'https://en.wikipedia.org/w/api.php?action=query&list=search$format=json&origin=*&srsearch='+s);
+    url = 'https://en.wikipedia.org/w/api.php?action=query&list=search$format=json&origin=*&srsearch='+s);*/
+
+const searchWikiURL = 'https://en.wikipedia.org/w/api.php';
+
+
+/*function formatWikiParams(wikiParams) {
+      const wikiQueryItems = Object.keys(wikiParams)*/
+ 
+    
+    function displayWikiResults(responseJson) {
+      // if there are previous results, remove them
+      console.log(responseJson);
+      $('#wiki-results').empty();
+      // iterate through the items array
+      for (let i = 0; i < responseJson.items.length; i++){
+        // for each video object in the items 
+        $('#wiki-results').append(
+          `<div class="row">
+                    <li><h3>${responseJson.items[i].title}</h3>
+                    <p>${responseJson.items[i].description}</p>
+                    </li>
+                    </div>`
+    /* <img src='${responseJson.items[i].snippet.thumbnails.default.url}' class="img-thumbnail">*/
+             //   https://www.youtube.com/watch?v=${responseJson.items[item].id.videoId}
+        )};
+      //display the results section  
+      $('#results').removeClass('hidden');
+    };
+
+      const wikiParams = {
+          action: 'query',
+          prop: 'revisions',
+          rvprop: 'content',
+          rvsection: "0",
+          format: 'json'
+        };
+
+     // const wikiQueryString = formatWikiQueryParams(wikiParams)
+      const wikiUrl = `${searchWikiURL}?${wikiParams}`;
+    
+      console.log(wikiUrl);{
+    
+      fetch(wikiUrl)
+        .then(response => {
+            console.log(response)
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error(response.statusText);
+        })
+        .then(responseJson => displayWikiResults(responseJson))
+        .catch(err => {
+          $('#err').text(`Something went wrong: ${err.message}`);
+        });
+    }
+
 
 
 
@@ -86,6 +132,7 @@ function watchForm() {
     const searchTerm = $('#murderer').val();
     const maxResults = $('#js-max-results').val();
     getYouTubeVideos(searchTerm, maxResults);
+    getWikiInfo(searchTerm);
   });
 }
 
