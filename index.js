@@ -1,6 +1,6 @@
 'use strict';
 
-const apiKey = 'AIzaSyDJsiWIrL8I583xvsI2OYHSNr13TQza-Go'; 
+const apiKey = 'AIzaSyAMJi2nJRLH9abrPH6lfGuLn9Cv6pwN0zI'; 
 const searchYoutubeURL = 'https://www.googleapis.com/youtube/v3/search';
 
 
@@ -67,13 +67,14 @@ function getYouTubeVideos(query, maxResults=5) {
 // call to Wikipedia API
 /*function searchWiki(searchWord) {
     wikiParams.titles = searchWord;
-    url = 'https://en.wikipedia.org/w/api.php?action=query&list=search$format=json&origin=*&srsearch='+s);*/
-
+    url = 'https://en.wikipedia.org/w/api.php?action=query&list=search$format=json&ori
+gin=*&srsearch='+s);*/
 const searchWikiURL = 'https://en.wikipedia.org/w/api.php';
 
 
 function formatWikiParams(wikiParams) {
       const wikiQueryItems = Object.keys(wikiParams)
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(wikiParams[key])}`)
       return wikiQueryItems.join('&');
 }
     
@@ -97,9 +98,11 @@ function formatWikiParams(wikiParams) {
     function getWikiInfo(query, maxResults=1){
       const wikiParams = {
           action: 'query',
+          list: 'search',
           prop: 'revisions',
-          rvprop: 'content',
           rvsection: "0",
+          srsearch: 'first last',
+          origin: '*',
           format: 'json'
         };
       
