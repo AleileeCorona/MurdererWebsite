@@ -72,9 +72,10 @@ function getYouTubeVideos(query, maxResults=5) {
 const searchWikiURL = 'https://en.wikipedia.org/w/api.php';
 
 
-/*function formatWikiParams(wikiParams) {
-      const wikiQueryItems = Object.keys(wikiParams)*/
- 
+function formatWikiParams(wikiParams) {
+      const wikiQueryItems = Object.keys(wikiParams)
+      return wikiQueryItems.join('&');
+}
     
     function displayWikiResults(responseJson) {
       // if there are previous results, remove them
@@ -93,7 +94,7 @@ const searchWikiURL = 'https://en.wikipedia.org/w/api.php';
       //display the results section  
       $('#results').removeClass('hidden');
     };
-
+    function getWikiInfo(query, maxResults=1){
       const wikiParams = {
           action: 'query',
           prop: 'revisions',
@@ -101,9 +102,10 @@ const searchWikiURL = 'https://en.wikipedia.org/w/api.php';
           rvsection: "0",
           format: 'json'
         };
+      
 
-     // const wikiQueryString = formatWikiQueryParams(wikiParams)
-      const wikiUrl = `${searchWikiURL}?${wikiParams}`;
+      const wikiQueryString = formatWikiParams(wikiParams)
+      const wikiUrl = `${searchWikiURL}?${wikiQueryString}`;
     
       console.log(wikiUrl);{
     
@@ -120,6 +122,7 @@ const searchWikiURL = 'https://en.wikipedia.org/w/api.php';
           $('#err').text(`Something went wrong: ${err.message}`);
         });
     }
+  }
 
 function watchForm() {
   $('form').submit(event => {
@@ -127,9 +130,9 @@ function watchForm() {
     const searchTerm = $('#murderer').val();
     const maxResults = $('#js-max-results').val();
     getYouTubeVideos(searchTerm, maxResults);
-    getWikiInfo(searchTerm);
+    getWikiInfo(searchTerm,maxResults)
   });
 }
-
-
 $(watchForm);
+
+
