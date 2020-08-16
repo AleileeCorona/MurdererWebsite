@@ -101,7 +101,7 @@ function formatWikiParams(wikiParams) {
           list: 'search',
           prop: 'revisions',
           rvsection: "0",
-          srsearch: 'first last',
+          srsearch: '',
           origin: '*',
           format: 'json'
         };
