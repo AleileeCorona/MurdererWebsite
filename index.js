@@ -82,15 +82,13 @@ const searchWikiURL = 'https://en.wikipedia.org/w/api.php';
       $('#wiki-results').empty();
       // iterate through the items array
       for (let i = 0; i < responseJson.items.length; i++){
-        // for each video object in the items 
+        // for each wiki object in the items 
         $('#wiki-results').append(
           `<div class="row">
                     <li><h3>${responseJson.items[i].title}</h3>
                     <p>${responseJson.items[i].description}</p>
                     </li>
                     </div>`
-    /* <img src='${responseJson.items[i].snippet.thumbnails.default.url}' class="img-thumbnail">*/
-             //   https://www.youtube.com/watch?v=${responseJson.items[item].id.videoId}
         )};
       //display the results section  
       $('#results').removeClass('hidden');
