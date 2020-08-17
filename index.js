@@ -1,6 +1,6 @@
-/*'use strict';
+'use strict';
 
-const apiKey = 'AIzaSyBdCkCtAmlmVi2S-Qx4GDi_ASATFtgyhjA'; 
+const apiKey = 'AIzaSyDJsiWIrL8I583xvsI2OYHSNr13TQza-Go'; 
 const searchYoutubeURL = 'https://www.googleapis.com/youtube/v3/search';
 
 
@@ -21,16 +21,15 @@ function displayYoutubeResults(responseJson) {
     //list with the video title, description,
     //and thumbnail
     $('#youtube-results-list').append(
-      `<div id="card-2" class="card">
+      `<div class="content">
+          <div class="boxshadow">
+                <h3 class="boxtitle youtubetitle">${responseJson.items[i].snippet.title}</h3>
+                  <span class="title style">            
                 <iframe id="ytplayer" type="text/html" width="200" height="200"
                 src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}?autoplay=0"
                 frameborder="1">
                 </iframe>
-                <h3>${responseJson.items[i].snippet.title}</h3>
                 <p>${responseJson.items[i].snippet.description}</p>
-                <iframe id="ytplayer" type="text/html" width="200" height="200"
-                src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}?autoplay=0"
-                frameborder="1"></iframe>
                 </div>`
 
     )};
@@ -103,4 +102,4 @@ function watchForm() {
 }
 $(watchForm);
 
-*/
+
