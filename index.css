@@ -10,15 +10,17 @@ body {
   background: url(https://images.unsplash.com/photo-1559581958-df379578606a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2147&q=80);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Lato';
   color: rgb(253, 250, 250);
   text-align: center;
+  height: 100%;
 
 }
 
-fieldset {
+/*fieldset {
   text-align: center;
-}
+}*/
 
 
 legend {
@@ -65,8 +67,8 @@ hr {
 #submit {
   display: flex;
   text-align: center;
-
 }
+
 .row:after {
   content: "";
   display: table;
@@ -76,12 +78,6 @@ hr {
   display: flex;
 
 }
-
-#vertical-center{
-  display: flex;
-  justify-content: center;
-}
-
 
 /*@media screen {
   min-device-width: 320px;
