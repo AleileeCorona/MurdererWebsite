@@ -43,7 +43,6 @@ h3{
   border: transparent;
   width: auto;
   color: white;
-  
 }
 
 #maxresult{
@@ -83,20 +82,6 @@ hr {
   justify-content: center;
 }
 
-
-footer{
-  text-align: center;
-  
-}
-
-.card-body{
-  color: black;
-  background: transparent;
-}
-.card-title{
-  color:black;
-  background: transparent;
-}
 
 /*@media screen {
   min-device-width: 320px;

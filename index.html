@@ -28,8 +28,50 @@
                     <h3>How dangerous can someone actually be?</h3>
                     <div class="form-group">
                         <label for=""></label>
-                        <input id='murderer' type="text" placeholder='Enter Murderer' autofocus required spellcheck="true">
-                        <i class="fas fa-search"></i>
+                        <select id='murderer' name= "select choice" placeholder='Enter Murderer' required>
+                            <option value="Select A Murderer">Select A Murder</option>
+                            <option value="Aileen Wuornos">Aileen Wuornos</option>
+                            <option value="Albert DeSalvo">Albert DeSalvo</option>
+                            <option value="Alexander Pichushkin">Alexander Pichushkin</option>
+                            <option value="Andrew Cunanan">Andrew Cunanan</option>
+                            <option value="Arthur Shawcross">Arthur Shawcross</option>
+                            <option value="Belle Gunness">Belle Gunness</option>
+                            <option value="Beverley Allitt">Beverley Allitt</option>
+                            <option value="Bobby Joe Long">Bobby Joe Long</option>
+                            <option value="Charles Manson">Charles Manson</option>
+                            <option value="Charles Ng">Charles Ng</option>
+                            <option value="David Berkowitz">David Berkowitz ("Son of Sam")</option>
+                            <option value="Dennis Nilsen">Dennis Nilsen</option>
+                            <option value="Dennis Rader">Dennis Rader ("BTK Killer")</option>
+                            <option value="Edmund Kemper">Edmund Kemper</option>
+                            <option value="Elizabeth Bathory">Elizabeth Bathory</option>
+                            <option value="Fred West">Fred West</option>
+                            <option value="Gary Ridgway">Gary Ridgway</option>
+                            <option value="Graham Young">Graham Young</option>
+                            <option value="H.H. Holmes">H.H. Holmes</option>
+                            <option value="Harold Shipman">Harold Shipman</option>
+                            <option value="Ian Brady">Ian Brady</option>
+                            <option value="Israel Keyes">Israel Keyes</option>
+                            <option value="Ivan Milat">Ivan Milat</option>
+                            <option value="Jack the Ripper">Jack the Ripper</option>
+                            <option value="Jack Unterweger">Jack Unterweger</option>
+                            <option value="Jeffrey Dahmer">Jeffrey Dahmer</option>
+                            <option value="Jerome Brudos">Jerome Brudos</option>
+                            <option value="Joel Rifkin">Joel Rifkin</option>
+                            <option value="John Christie">John Christie</option>
+                            <option value="John Wayne Gacy">John Wayne Gacy</option>
+                            <option value="Kenneth Bianchi">Kenneth Bianchi</option>
+                            <option value="Moses Sithole">Moses Sithole</option>
+                            <option value="Ottis Toole">Ottis Toole</option>
+                            <option value="Pedro Alonso Lopez">Pedro Alonso Lopez</option>
+                            <option value="Peter Kurten">Peter Kurten</option>
+                            <option value="Richard Ramirez">Richard Ramirez</option>
+                            <option value="Richard Speck">Richard Speck</option>
+                            <option value="Rosemary West">Rosemary West</option>
+                            <option value="Ted Bundy">Ted Bundy</option>
+                            <option value="Wayne Williams">Wayne Williams</option>
+                        <i class="fas fa-search"></i> 
+                        </select>
                     </div>
                <!--    <div class="form-group">
                    <label for="" class="label form-label"></label>
@@ -48,11 +90,8 @@
             </form>
         </section>
         <section id="results" class="hidden">
-       <!-- <h2></h2>-->
-          <ul id="results-list">
-          </ul>
-          <ul id="wiki-results">
-          </ul>
+          <ul id="wiki-results"></ul>   
+          <ul id="youtube-results-list"></ul>
         </section>
         <section id="results"></section>
     </main>
