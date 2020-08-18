@@ -79,12 +79,14 @@ button {
   display: flex;
 
 }
+.content{
+  display: flex;
+}
 
-
-@media {
+/*@media {
   min-device-width: 320px;
   max-device-width : 480px;
-  /* Styles */
+   Styles 
   }
 
 @media screen {
@@ -93,12 +95,10 @@ button {
 }
 */
 
-#results {
-  display: flex;
-}
-
 #wiki-results, #youtube-results-list{
   width: 50%;
+  min-height: 200px;
+  padding: 70px;
 }
 
 
