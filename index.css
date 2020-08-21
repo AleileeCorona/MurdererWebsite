@@ -48,11 +48,8 @@ h3{
   color: white;
 }
 
-#maxresult{
-  background-color: transparent;
-  border: transparent;
-  width: auto;
-  color: white;
+option {
+  background-color: black;
 }
 
 ::placeholder{
@@ -83,22 +80,23 @@ button {
   display: flex;
 }
 
-/*@media {
-  min-device-width: 320px;
-  max-device-width : 480px;
-   Styles 
-  }
-
-@media screen {
-  min-device-width: 768px;
-  max-decive-width: 1024px;
-}
-*/
-
 #wiki-results, #youtube-results-list{
   width: 50%;
   min-height: 200px;
   padding: 70px;
 }
+
+
+
+@media all and (max-width: 800px) {
+  #results {
+    flex-direction: row;
+  }
+}
+
+
+
+
+
 
 
