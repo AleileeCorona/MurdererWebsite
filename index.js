@@ -23,7 +23,7 @@ function displayYoutubeResults(responseJson) {
     $('#youtube-results-list').append(
       `<div class="content">
           <div class="boxshadow">
-                <h3 class="boxtitle youtubetitle">${responseJson.items[i].snippet.title}</h3>
+                <h5 class="boxtitle youtubetitle">${responseJson.items[i].snippet.title}</h5>
                   <span class="title style">            
                 <iframe id="ytplayer" type="text/html" width="200" height="200"
                 src="https://www.youtube.com/embed/${responseJson.items[i].id.videoId}?autoplay=0"
