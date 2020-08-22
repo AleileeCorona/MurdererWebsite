@@ -20,7 +20,7 @@ Wikipedia content:
 
 ![wikipedia](images/wikicontent.png)
 
-Youtube Content!
+Youtube Content:
 
 ![youtube](images/youtube.png)
 ![wiki/youtube](images/wikiyoutubecontent.png)
