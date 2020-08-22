@@ -9,21 +9,28 @@ Motivation
 
 True crime is trending right now and I wanted to create a website where you can get content in one area instead of going to multiple websites.
 
-Screenshots
+Screenshots:
 
-Beginning page 
+Landing Page:
 
-Wikipedia content
+![landing](images/landingpage.png)
+![landing](images/dropdownmenu.png)
 
-Youtube Content
+Wikipedia content:
+
+![wikipedia](images/wikicontent.png)
+
+Youtube Content!
+
+![youtube](image/youtubecontent.png)
+![wiki/youtube](image/wikiyoutubecontent.png)
 
 
-
-Features
+Features:
 
 There is a drop down menu of specific murderers to choose from. Click on a name and search.
 
-Build With 
+Build With: 
 jQuery
 HTML
 Javascript
