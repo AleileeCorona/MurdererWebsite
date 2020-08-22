@@ -36,15 +36,13 @@ function displayYoutubeResults(responseJson) {
   //display the results section  
   $('#results').removeClass('hidden');
 };
-
+// parameters to extract content from youtube
 function getYouTubeVideos(query, maxResults=5) {
   const youtubeParams = {
    part: 'snippet', 
    maxResults,
-// id: 'string',
    key: apiKey,
    q: query,
-  // items: 'list'
   };
   const youtubeQueryString = formatYoutubeQueryParams(youtubeParams)
   const url = `${searchYoutubeURL}?${youtubeQueryString}`;
