@@ -1,4 +1,4 @@
-/*'use strict';
+'use strict';
 
 const apiKey = 'AIzaSyDPTl-UKrd6XLNbrkrFuIjDWUP94nFgOPc'; 
 const searchYoutubeURL = 'https://www.googleapis.com/youtube/v3/search';
@@ -102,4 +102,3 @@ function watchForm() {
 }
 $(watchForm);
 
-*/

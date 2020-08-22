@@ -95,6 +95,7 @@ button {
 @media all and (max-width: 800px) {
   #results {
     flex-direction: row;
+    text-align: left;
   }
 }
 
