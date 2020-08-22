@@ -87,11 +87,6 @@ button {
   text-align: left;
 }
 
-.random{
-  text-align: left;
-}
-
-
 @media all and (max-width: 800px) {
   #results {
     flex-direction: row;
