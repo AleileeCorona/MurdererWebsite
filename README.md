@@ -22,8 +22,8 @@ Wikipedia content:
 
 Youtube Content!
 
-![youtube](image/youtubecontent.png)
-![wiki/youtube](image/wikiyoutubecontent.png)
+![youtube](images/youtube.png)
+![wiki/youtube](images/wikiyoutubecontent.png)
 
 
 Features:
