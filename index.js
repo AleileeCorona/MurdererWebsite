@@ -1,4 +1,4 @@
-/*'use strict';
+'use strict';
 
 const apiKey = 'AIzaSyCYdH7Yo2czVIJecSn_9CV2ooOuJjv2N3s'; 
 const searchYoutubeURL = 'https://www.googleapis.com/youtube/v3/search';
@@ -89,6 +89,16 @@ function getWikiInfo(query){
     });
 }
 
+function Validate() {
+  var e = document.getElementById("murderer");
+  var strUser = e.options[e.selectedIndex].value;
+
+  var strUser1 = e.options[e.selectedIndex].text;
+  if(strUser==0) {
+    alert("Please select a user");
+  }
+}
+
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
@@ -99,5 +109,3 @@ function watchForm() {
   });
 }
 $(watchForm);
-
-*/
