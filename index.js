@@ -97,6 +97,9 @@ function Validate() {
   if(strUser==0) {
     alert("Please select a user");
   }
+  else {
+    alert("Success!" + strUser1);
+  }
 }
 
 function watchForm() {
