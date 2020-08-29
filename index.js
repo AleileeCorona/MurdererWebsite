@@ -89,18 +89,6 @@ function getWikiInfo(query){
     });
 }
 
-function Validate() {
-  var e = document.getElementById("murderer");
-  var strUser = e.options[e.selectedIndex].value;
-
-  var strUser1 = e.options[e.selectedIndex].text;
-  if(strUser==0) {
-    alert("Please select a user");
-  }
-  else {
-    alert("Success!" + strUser1);
-  }
-}
 
 function watchForm() {
   $('form').submit(event => {
